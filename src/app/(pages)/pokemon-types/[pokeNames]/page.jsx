@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ImgComponent from '../../../(components)/ImgComponent/ImgComponent';
 import Pagination from '@/app/(components)/Pagination/Pagination';
 
@@ -26,8 +26,6 @@ export default async function PokeNames({ params }) {
     const indexOfFirstPoke = indexOfLastPoke - pokemonsPerPage;
     const currentPokemons = pokObject?.pokemon?.slice(indexOfFirstPoke, indexOfLastPoke);
 
-    // Change page
-    // const paginate = pageNumber => setCurrentPage(pageNumber);
 
     const handlePageClick = (data) => {
         let currentPAGE = data.selected + 1;
@@ -48,7 +46,7 @@ export default async function PokeNames({ params }) {
 
                 <div className="row g-3 mt-5 w-75 m-auto">
                     {currentPokemons?.map((pokemon, idx) => {
-                        return <div id={idx} className='col-sm-3 py-2'>
+                        return <div key={idx} className='col-sm-3 py-2'>
                             <Link href={`pokemon-data/${pokemon.pokemon.url.slice(34, 50)}`} className='fw-bold p-2 w-100 rounded-4 btn btn-outline-light border-0' >
                                 <p style={{ fontSize: '15px' }}>  {pokemon.pokemon.name} </p>
                                 <ImgComponent props={pokemon.pokemon.url.slice(34, 50)} />
