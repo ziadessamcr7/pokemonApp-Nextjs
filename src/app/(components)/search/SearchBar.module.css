@@ -1,0 +1,38 @@
+.inputWrapper {
+    width: 22%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    box-shadow: 0px 0px 8px #ddd;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 89px;
+    top: 1px;
+}
+
+#searchInput {
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    font-size: 14px;
+    width: 100%;
+    margin-left: 5px;
+    color: white;
+}
+
+#searchInput::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+#searchIcon {
+    color: royalblue;
+    font-size: 18px;
+}
