@@ -39,3 +39,14 @@
 .active>.page-link {
     background-color: black;
 }
+
+.home {
+    position: fixed;
+    left: 15%;
+    top: -1px;
+    /* background-color: red; */
+    font-size: 43px;
+    color: oldlace;
+    cursor: pointer;
+    z-index: 555555;
+}

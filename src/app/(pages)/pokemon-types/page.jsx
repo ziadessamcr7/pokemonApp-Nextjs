@@ -60,7 +60,7 @@ export default function PokemoneCategories() {
 
 
                         {data?.data?.results?.map((cat, idx) => {
-                            return <div key={idx} className='col-sm-3'>
+                            return <div key={idx} className='col-sm-4 col-md-3'>
                                 <Link href={`pokemon-types/${cat.url.slice(31, 50)}`} className='fw-bold p-2 w-100 rounded-2 btn btn-outline-light'>
                                     {cat.name}
                                 </Link >

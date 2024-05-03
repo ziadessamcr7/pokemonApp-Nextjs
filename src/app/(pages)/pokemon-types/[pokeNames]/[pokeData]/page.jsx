@@ -2,6 +2,7 @@ import ExampleChart from '@/app/(components)/chart/Chart';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
+import { MdOutlineCatchingPokemon } from 'react-icons/md';
 
 export default async function PokeData({ params }) {
 
@@ -77,6 +78,8 @@ export default async function PokeData({ params }) {
                 </div>
 
             </div>
+            <Link href={`/pokemon-types`} > <MdOutlineCatchingPokemon className="home" /> </Link>
+
         </section>
     )
 }

@@ -3,6 +3,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import ImgComponent from '../../../(components)/ImgComponent/ImgComponent';
 import Pagination from '@/app/(components)/Pagination/Pagination';
+import { MdOutlineCatchingPokemon } from "react-icons/md";
+
 
 
 export default async function PokeNames({ params }) {
@@ -35,8 +37,8 @@ export default async function PokeNames({ params }) {
 
     return (
         <section className='text-dark pokeNames'>
-            <div className="container-fluid pn">
-                <div className='row'>
+            <div className="container-fluid pn ">
+                <div className='row position-fixed w-100'>
                     <div className='col-md-12 bg-dark-subtle rounded-bottom-circle opacity-75'>
                         <h2 className='text-center'>
                             {pokObject?.name?.toUpperCase()} #{pokObject?.pokemon?.length}
@@ -62,6 +64,9 @@ export default async function PokeNames({ params }) {
                     handlePageClick={handlePageClick}
                 />
             </div>
+
+            <Link href={`/pokemon-types`} > <MdOutlineCatchingPokemon className="home" /> </Link>
+
         </section>
 
     )
